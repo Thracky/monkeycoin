@@ -116,15 +116,15 @@ public:
         pchMessageStart[2] = 0xb6;
         pchMessageStart[3] = 0xdb;
         vAlertPubKey = ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9");
-        nDefaultPort = 9333;
+        nDefaultPort = 5432;
         bnProofOfWorkLimit = ~uint256(0) >> 20;
-        nSubsidyHalvingInterval = 840000;
+        nSubsidyHalvingInterval = 100000;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
-        nTargetSpacing = 2.5 * 60; // 2.5 minutes
+        nTargetTimespan = 2 * 24 * 60 * 60; // 2 days
+        nTargetSpacing = 2 * 60; // 2 minute block time
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -141,7 +141,7 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 50 * COIN;
+        txNew.vout[0].nValue = 64 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
@@ -202,13 +202,13 @@ public:
         pchMessageStart[2] = 0xb7;
         pchMessageStart[3] = 0xdc;
         vAlertPubKey = ParseHex("04302390343f91cc401d56d68b123028bf52e5fca1939df127f63c6467cdf9c8e2c14b61104cf817d0b780da337893ecc4aaff1309e536162dabbdb45200ca2b0a");
-        nDefaultPort = 19333;
+        nDefaultPort = 15432;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
-        nTargetSpacing = 2.5 * 60; // 2.5 minutes
+        nTargetTimespan = 2 * 24 * 60 * 60; // 2 days
+        nTargetSpacing = 2 * 60; // 2 minutes
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1317798646;
@@ -218,9 +218,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("monkeycointools.com", "testnet-seed.monkeycointools.com"));
-        vSeeds.push_back(CDNSSeedData("xurious.com", "testnet-seed.ltc.xurious.com"));
-        vSeeds.push_back(CDNSSeedData("wemine-testnet.com", "dnsseed.wemine-testnet.com"));
+        vSeeds.push_back(CDNSSeedData("monkeycoin.suchsecurity.com", "testnet.monkeycoin.suchsecurity.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(111);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(196);
@@ -239,7 +237,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         // MonkeyCoin: Testnet v2 enforced as of block 400k
-        nEnforceV2AfterHeight = 400000;
+        nEnforceV2AfterHeight = 0;
     }
     const Checkpoints::CCheckpointData& Checkpoints() const 
     {
@@ -265,14 +263,14 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
-        nTargetSpacing = 2.5 * 60; // 2.5 minutes
+        nTargetTimespan = 2 * 24 * 60 * 60; // 2 days
+        nTargetSpacing = 2 * 60; // 2 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1296688602;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 0;
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 19444;
+        nDefaultPort = 16543;
         assert(hashGenesisBlock == uint256("0x530827f38f93b43ed12af0b3ad25a288dc02ed74d6d7857862df51fc56c416f9"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
