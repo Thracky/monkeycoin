@@ -112,8 +112,8 @@
         <translation>Новчаник је шифрован</translation>
     </message>
     <message>
-        <source>Litecoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
-        <translation>Litecoin će se sad zatvoriti da bi završio  proces enkripcije. Zapamti da enkripcija tvog novčanika ne može u potpunosti da zaštiti tvoje litecoine da ne budu ukradeni od malawarea koji bi inficirao tvoj kompjuter.</translation>
+        <source>MonkeyCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your monkeycoins from being stolen by malware infecting your computer.</source>
+        <translation>MonkeyCoin će se sad zatvoriti da bi završio  proces enkripcije. Zapamti da enkripcija tvog novčanika ne može u potpunosti da zaštiti tvoje monkeycoine da ne budu ukradeni od malawarea koji bi inficirao tvoj kompjuter.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -199,12 +199,12 @@
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>Send coins to a Litecoin address</source>
-        <translation>Пошаљите новац на litecoin адресу</translation>
+        <source>Send coins to a MonkeyCoin address</source>
+        <translation>Пошаљите новац на monkeycoin адресу</translation>
     </message>
     <message>
-        <source>Modify configuration options for Litecoin</source>
-        <translation>Изаберите могућности litecoin-а</translation>
+        <source>Modify configuration options for MonkeyCoin</source>
+        <translation>Изаберите могућности monkeycoin-а</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -338,8 +338,8 @@ Address: %4
         <translation>верзија</translation>
     </message>
     <message>
-        <source>About Litecoin Core</source>
-        <translation>O Litecoin Coru</translation>
+        <source>About MonkeyCoin Core</source>
+        <translation>O MonkeyCoin Coru</translation>
     </message>
     <message>
         <source>Usage:</source>
