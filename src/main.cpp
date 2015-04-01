@@ -881,7 +881,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
         vInOutPoints.insert(txin.prevout);
     }
 
-    if (tx.IsCoinBase())
+  /*  if (tx.IsCoinBase())
     {
         if (tx.vin[0].scriptSig.size() < 2 || tx.vin[0].scriptSig.size() > 100)
             return state.DoS(100, error("CheckTransaction() : coinbase script size"),
@@ -894,7 +894,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
                 return state.DoS(10, error("CheckTransaction() : prevout is null"),
                                  REJECT_INVALID, "bad-txns-prevout-null");
     }
-
+*/
     return true;
 }
 
